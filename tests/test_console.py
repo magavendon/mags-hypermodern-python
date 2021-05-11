@@ -1,10 +1,15 @@
 import click.testing
+import pytest
 
 
 from mags_hypermodern_python import console
 
 
-def test_main_succeeds():
-  runner = click.testing.CliRunner()
+@pytest.fixture
+def runner():
+  return click.testing.CliRunner()
+
+
+def test_main_succeeds(runner):
   result = runner.invoke(console.main)
   assert result.exit_code == 0
