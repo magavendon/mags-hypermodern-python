@@ -9,6 +9,10 @@ repository = "https://github.com/magavendon/mags-hypermodern-python"
 keywords = ["hypermodern"]
 authors = ["James Grider <james.grider@faa.gov>"]
 
+[tool.poetry.scripts]
+mags-hypermodern-python = "mags_hypermodern_python.console:main"
+mhp = "mags_hypermodern_python.console:main"
+
 [tool.poetry.dependencies]
 python = "^3.7"
 click = "^7.1.2"
