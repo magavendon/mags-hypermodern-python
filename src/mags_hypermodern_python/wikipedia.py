@@ -1,13 +1,19 @@
-from typing import Any
+from dataclasses import dataclass
 
 import click
 import requests
 
 
+@dataclass
+class Page:
+    title: str
+    extract: str
+
+
 API_URL: str = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 
 
-def random_page(language: str = "en") -> Any:
+def random_page(language: str = "en") -> Page:
     url = API_URL.format(language=language)
 
     try:
