@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 
 import click
+import desert
+import marshmallow
 import requests
 
 
@@ -11,6 +13,7 @@ class Page:
 
 
 API_URL: str = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
+schema = desert.schema(Page, meta={"unkown": marshmallow.EXCLUDE})
 
 
 def random_page(language: str = "en") -> Page:
@@ -19,7 +22,8 @@ def random_page(language: str = "en") -> Page:
     try:
         with requests.get(url) as response:
             response.raise_for_status()
-            return response.json()
-    except requests.RequestException as error:
+            data = response.json()
+            return schema.load(data)
+    except (requests.RequestException, marshmallow.ValidationError) as error:
         message = str(error)
         raise click.ClickException(message)

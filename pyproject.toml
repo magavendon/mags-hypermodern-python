@@ -17,6 +17,8 @@ mhp = "mags_hypermodern_python.console:main"
 python = "^3.7"
 click = "^7.1.2"
 requests = "^2.25.1"
+desert = "^2020.11.18"
+marshmallow = "^3.12.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
