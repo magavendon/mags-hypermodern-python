@@ -4,7 +4,7 @@ import tempfile
 import nox
 
 
-nox.options.sessions = "lint", "safety", "mypy", "pytpe", "tests"
+nox.options.sessions = "lint", "safety", "mypy", "pytype", "tests"
 
 
 def install_with_constraints(session, *args, **kwargs):
