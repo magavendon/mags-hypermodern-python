@@ -29,7 +29,7 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
 
 @nox.session(python="3.8")
 def black(session: Session) -> None:
-    """ Run black code formatter."""
+    """Run black code formatter."""
     args = session.posargs or locations
     install_with_constraints(session, "black")
     session.run("black", *args)
