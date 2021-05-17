@@ -35,6 +35,7 @@ safety = "^1.10.3"
 mypy = "^0.812"
 pytype = {version = "^2021.5.11", python = "3.7"}
 typeguard = "^2.12.0"
+flake8-annotations = "^2.6.2"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
