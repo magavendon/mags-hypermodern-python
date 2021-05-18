@@ -10,8 +10,8 @@ keywords = ["hypermodern"]
 authors = ["James Grider <james.grider@faa.gov>"]
 
 [tool.poetry.scripts]
-mags-hypermodern-python = "mags_hypermodern_python.console:main"
-mhp = "mags_hypermodern_python.console:main"
+mags-hypermodern-python = "src.mags_hypermodern_python.console:main"
+mhp = "src.mags_hypermodern_python.console:main"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -38,6 +38,7 @@ typeguard = "^2.12.0"
 flake8-annotations = "^2.6.2"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.0"
+xdoctest = "^0.15.4"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
