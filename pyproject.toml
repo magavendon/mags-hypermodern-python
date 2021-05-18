@@ -39,6 +39,7 @@ flake8-annotations = "^2.6.2"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.0"
 xdoctest = "^0.15.4"
+Sphinx = "^4.0.1"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
