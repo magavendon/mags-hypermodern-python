@@ -6,8 +6,9 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/magavendon/mags-hypermodern-python"
 repository = "https://github.com/magavendon/mags-hypermodern-python"
+documentation = "https://hypermodern-python.readthedocs.io"
 keywords = ["hypermodern"]
-authors = ["James Grider <james.grider@faa.gov>"]
+authors = ["Magavendon"]
 
 [tool.poetry.scripts]
 mags-hypermodern-python = "src.mags_hypermodern_python.console:main"
