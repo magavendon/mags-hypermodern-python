@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mags-hypermodern-python"
-version = "0.1.0"
+version = "0.2.0"
 description = "The hypermodern Python project"
 license = "MIT"
 readme = "README.md"
@@ -19,6 +19,7 @@ click = "^7.1.2"
 requests = "^2.25.1"
 desert = "^2020.11.18"
 marshmallow = "^3.12.1"
+importlib-metadata = {version = "^4.0.1", python = "<3.8"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
